@@ -13,6 +13,10 @@
 		C8FBD07F27EE18AE00911F61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FBD06D27EE18A700911F61 /* ContentView.swift */; };
 		C8FBD08027EE18AE00911F61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8FBD06E27EE18AE00911F61 /* Assets.xcassets */; };
 		C8FBD08127EE18AE00911F61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8FBD06E27EE18AE00911F61 /* Assets.xcassets */; };
+		C8FBD08B27EE194000911F61 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FBD08A27EE194000911F61 /* Note.swift */; };
+		C8FBD08C27EE194000911F61 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FBD08A27EE194000911F61 /* Note.swift */; };
+		C8FBD09227EE1AAF00911F61 /* NewNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FBD09127EE1AAF00911F61 /* NewNote.swift */; };
+		C8FBD09327EE1AAF00911F61 /* NewNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FBD09127EE1AAF00911F61 /* NewNote.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,8 @@
 		C8FBD07327EE18AE00911F61 /* NotesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8FBD07927EE18AE00911F61 /* NotesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8FBD07B27EE18AE00911F61 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		C8FBD08A27EE194000911F61 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		C8FBD09127EE1AAF00911F61 /* NewNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNote.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +61,9 @@
 			isa = PBXGroup;
 			children = (
 				C8FBD06C27EE18A700911F61 /* NotesAppApp.swift */,
-				C8FBD06D27EE18A700911F61 /* ContentView.swift */,
+				C8FBD09027EE1A6000911F61 /* View Model */,
+				C8FBD08F27EE1A5B00911F61 /* Model */,
+				C8FBD08E27EE1A5500911F61 /* Views */,
 				C8FBD06E27EE18AE00911F61 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -76,6 +84,30 @@
 				C8FBD07B27EE18AE00911F61 /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		C8FBD08E27EE1A5500911F61 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C8FBD06D27EE18A700911F61 /* ContentView.swift */,
+				C8FBD09127EE1AAF00911F61 /* NewNote.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C8FBD08F27EE1A5B00911F61 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C8FBD08A27EE194000911F61 /* Note.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C8FBD09027EE1A6000911F61 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,8 +208,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8FBD09227EE1AAF00911F61 /* NewNote.swift in Sources */,
 				C8FBD07E27EE18AE00911F61 /* ContentView.swift in Sources */,
 				C8FBD07C27EE18AE00911F61 /* NotesAppApp.swift in Sources */,
+				C8FBD08B27EE194000911F61 /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,8 +219,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8FBD09327EE1AAF00911F61 /* NewNote.swift in Sources */,
 				C8FBD07F27EE18AE00911F61 /* ContentView.swift in Sources */,
 				C8FBD07D27EE18AE00911F61 /* NotesAppApp.swift in Sources */,
+				C8FBD08C27EE194000911F61 /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
