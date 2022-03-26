@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C8A64D9B27EE9B5E00834B69 /* CreateNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A64D9A27EE9B5E00834B69 /* CreateNotes.swift */; };
+		C8A64D9C27EE9B5E00834B69 /* CreateNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A64D9A27EE9B5E00834B69 /* CreateNotes.swift */; };
 		C8FBD07C27EE18AE00911F61 /* NotesAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FBD06C27EE18A700911F61 /* NotesAppApp.swift */; };
 		C8FBD07D27EE18AE00911F61 /* NotesAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FBD06C27EE18A700911F61 /* NotesAppApp.swift */; };
 		C8FBD07E27EE18AE00911F61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FBD06D27EE18A700911F61 /* ContentView.swift */; };
@@ -20,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C8A64D9A27EE9B5E00834B69 /* CreateNotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNotes.swift; sourceTree = "<group>"; };
 		C8FBD06C27EE18A700911F61 /* NotesAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesAppApp.swift; sourceTree = "<group>"; };
 		C8FBD06D27EE18A700911F61 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C8FBD06E27EE18AE00911F61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				C8FBD08A27EE194000911F61 /* Note.swift */,
+				C8A64D9A27EE9B5E00834B69 /* CreateNotes.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -212,6 +216,7 @@
 				C8FBD07E27EE18AE00911F61 /* ContentView.swift in Sources */,
 				C8FBD07C27EE18AE00911F61 /* NotesAppApp.swift in Sources */,
 				C8FBD08B27EE194000911F61 /* Note.swift in Sources */,
+				C8A64D9B27EE9B5E00834B69 /* CreateNotes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +228,7 @@
 				C8FBD07F27EE18AE00911F61 /* ContentView.swift in Sources */,
 				C8FBD07D27EE18AE00911F61 /* NotesAppApp.swift in Sources */,
 				C8FBD08C27EE194000911F61 /* Note.swift in Sources */,
+				C8A64D9C27EE9B5E00834B69 /* CreateNotes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,6 +18,7 @@ struct NewNote: View {
             VStack {
                 Form {
                     TextField("Title", text: $title)
+                    TextField("Description", text: $description)
                 }
             }
         }
