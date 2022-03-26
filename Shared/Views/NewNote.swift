@@ -12,6 +12,10 @@ struct NewNote: View {
     //Details of the new note
     @State private var title = ""
     @State private var description = ""
+    @ObservedObject var NewNote: CreateNotes
+    
+    // Whether we are showing the add activity view or not
+    @Binding var addingNote: Bool
     
     var body: some View {
         NavigationView {
@@ -23,10 +27,11 @@ struct NewNote: View {
             }
         }
     }
+    
 }
 
-struct NewNote_Previews: PreviewProvider {
-    static var previews: some View {
-        NewNote()
-    }
-}
+//struct NewNote_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NewNote()
+//    }
+//}

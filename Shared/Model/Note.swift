@@ -8,19 +8,26 @@
 import Foundation
 
 //MARK: Stored properties
-class Note: Identifiable, Codable, ObservableObject {
+class Note: Identifiable, ObservableObject {
     var id: UUID
     var title: String
     var description: String
-    var priority: String
+    @Published var AddMoreDescriptions: [AddDescription]
     
     //MARK: Initializers
 
-    internal init(id:UUID = UUID(), description: String, title: String, priority: String ) {
+    internal init(id:UUID = UUID(), description: String, title: String, AddMoreDescriptions: [AddDescription] ) {
         self.id = id
         self.description = description
         self.title = title
-        self.priority = priority
+        self.AddMoreDescriptions = AddMoreDescriptions
         
     }
 }
+
+
+var testData = [
+Note(description: "Buy apples, lettuce and milk", title: "Grocery List", AddMoreDescriptions: [
+    AddDescription(description: "Oranges, sambal", date: Date())
+])
+]
