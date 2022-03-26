@@ -16,7 +16,7 @@ class Note: Identifiable, ObservableObject {
     
     //MARK: Initializers
 
-    internal init(id:UUID = UUID(), description: String, title: String, AddMoreDescriptions: [AddDescription] ) {
+    internal init(id:UUID = UUID(), description: String, title: String, AddMoreDescriptions: [AddDescription] = [] ) {
         self.id = id
         self.description = description
         self.title = title
