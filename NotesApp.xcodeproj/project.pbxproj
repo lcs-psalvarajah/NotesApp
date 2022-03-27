@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C851861827F0FC470020ADCD /* NewNoteDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C851861727F0FC470020ADCD /* NewNoteDetailView.swift */; };
+		C851861927F0FC470020ADCD /* NewNoteDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C851861727F0FC470020ADCD /* NewNoteDetailView.swift */; };
 		C89DD5C327EF54D400A86DB0 /* AddDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89DD5C227EF54D400A86DB0 /* AddDescription.swift */; };
 		C89DD5C427EF54D400A86DB0 /* AddDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89DD5C227EF54D400A86DB0 /* AddDescription.swift */; };
 		C89DD5C627EF54E500A86DB0 /* AddMoreDescriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89DD5C527EF54E500A86DB0 /* AddMoreDescriptions.swift */; };
@@ -28,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C851861727F0FC470020ADCD /* NewNoteDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteDetailView.swift; sourceTree = "<group>"; };
 		C89DD5C227EF54D400A86DB0 /* AddDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDescription.swift; sourceTree = "<group>"; };
 		C89DD5C527EF54E500A86DB0 /* AddMoreDescriptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMoreDescriptions.swift; sourceTree = "<group>"; };
 		C89DD5C827EF5A3F00A86DB0 /* StoredNotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredNotes.swift; sourceTree = "<group>"; };
@@ -103,6 +106,7 @@
 			children = (
 				C8FBD06D27EE18A700911F61 /* ContentView.swift */,
 				C8FBD09127EE1AAF00911F61 /* NewNote.swift */,
+				C851861727F0FC470020ADCD /* NewNoteDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -230,6 +234,7 @@
 				C89DD5C627EF54E500A86DB0 /* AddMoreDescriptions.swift in Sources */,
 				C8FBD07C27EE18AE00911F61 /* NotesAppApp.swift in Sources */,
 				C8FBD08B27EE194000911F61 /* Note.swift in Sources */,
+				C851861827F0FC470020ADCD /* NewNoteDetailView.swift in Sources */,
 				C89DD5C927EF5A3F00A86DB0 /* StoredNotes.swift in Sources */,
 				C8A64D9B27EE9B5E00834B69 /* CreateNotes.swift in Sources */,
 			);
@@ -245,6 +250,7 @@
 				C89DD5C727EF54E500A86DB0 /* AddMoreDescriptions.swift in Sources */,
 				C8FBD07D27EE18AE00911F61 /* NotesAppApp.swift in Sources */,
 				C8FBD08C27EE194000911F61 /* Note.swift in Sources */,
+				C851861927F0FC470020ADCD /* NewNoteDetailView.swift in Sources */,
 				C89DD5CA27EF5A3F00A86DB0 /* StoredNotes.swift in Sources */,
 				C8A64D9C27EE9B5E00834B69 /* CreateNotes.swift in Sources */,
 			);

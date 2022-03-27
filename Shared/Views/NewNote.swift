@@ -12,7 +12,9 @@ struct NewNote: View {
     //Details of the new note
     @State private var title = ""
     @State private var description = ""
-    @ObservedObject var createNotes: CreateNotes
+    
+    // Get a reference to the store of notes (StoredNotes)
+    @ObservedObject var store: StoredNotes
     
     // Whether we are showing the add activity view or not
     @Binding var addingNote: Bool
@@ -34,28 +36,33 @@ struct NewNote: View {
                     
                 }
                 .navigationTitle("New Note")
-//                .toolbar {
-//
-//                    ToolbarItem(placement: ToolbarItemPlacement.primaryAction) {
+                .toolbar {
+                    ToolbarItem(placement: .primaryAction) {
+                        Button("Save") {
+                            saveNote()
+                        }
                         
-                        //                        Button(action: {
-                        //                            print("Here is where a category gets created")
-                        //                            saveCategory()
-                        //                        }, label: {
-                        //                            Text("Save")
-                        //                        })
-                        
-//                    }
-//                }
-                
-                
+                    }
+                    
+                    
+                }
             }
         }
     }
+    
+    func saveNote() {
+        // Add the note to the list of notes
+        store.notes.append(Note(description: description, title: title))
+        
+        //Dismiss this view
+        addingNote = false
+        
+        
+    }
 }
 
-//struct NewNote_Previews: PreviewProvider {
-//    static var previews: some View {
-//        NewNote()
-//    }
-//}
+struct NewNote_Previews: PreviewProvider {
+    static var previews: some View {
+        NewNote(store: testStore, addingNote: .constant(true))
+    }
+}
