@@ -16,8 +16,7 @@ struct ContentView: View {
         
     var body: some View {
         List(store.notes) { note in
-            NewNote
-            
+            NewNoteDetailView(note: note)
         }
     }
 }

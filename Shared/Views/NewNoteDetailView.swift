@@ -9,14 +9,24 @@ import SwiftUI
 
 struct NewNoteDetailView: View {
     @ObservedObject var note: Note
+    @StateObject private var createNote = CreateNotes()
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ForEach(createNote.defined) { currentNote in
+            HStack {
+                VStack (alignment:.leading){
+                    NavigationLink(currentNote.title,
+                                   destination: ExistingNote(noteTitle:
+                                                                currentNote))
+                }
+            }
+            
+        }
     }
 }
 
 struct NewNoteDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        NewNoteDetailView()
+        NewNoteDetailView(note: testData[0])
     }
 }
