@@ -13,6 +13,11 @@ struct NewNoteDetailView: View {
     
     var body: some View {
             HStack () {
+                Image(systemName: note.starred ?
+                      "star.fill" : "star")
+                    .onTapGesture {
+                        note.starred.toggle()
+                    }
                 VStack{
                 Text(note.title)
                         .multilineTextAlignment(.leading)

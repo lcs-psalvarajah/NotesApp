@@ -12,14 +12,16 @@ class Note: Identifiable, ObservableObject {
     var id: UUID
     var title: String
     var description: String
+    @Published var starred: Bool
 //    @Published var AddMoreDescriptions: [AddDescription]
     
     //MARK: Initializers
 
-    internal init(id:UUID = UUID(), description: String, title: String ) {
+    internal init(id:UUID = UUID(), description: String, title: String, starred: Bool ) {
         self.id = id
         self.description = description
         self.title = title
+        self.starred = starred
 //        self.AddMoreDescriptions = AddMoreDescriptions
         
     }
@@ -27,5 +29,5 @@ class Note: Identifiable, ObservableObject {
 
 
 var testData = [
-Note(description: "Buy apples, lettuce and milk", title: "Grocery List")
+    Note(description: "Buy apples, lettuce and milk", title: "Grocery List", starred: true)
 ]

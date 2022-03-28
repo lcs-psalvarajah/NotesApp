@@ -46,7 +46,7 @@ struct NewNote: View {
     
     func saveNote() {
         // Add the note to the list of notes
-        store.notes.append(Note(description: description, title: title))
+        store.notes.append(Note(description: description, title: title, starred: false))
         
         //Dismiss this view
         addingNote = false
