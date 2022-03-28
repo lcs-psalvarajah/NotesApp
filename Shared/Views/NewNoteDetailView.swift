@@ -12,18 +12,14 @@ struct NewNoteDetailView: View {
     @StateObject private var createNote = CreateNotes()
     
     var body: some View {
-        ForEach(createNote.defined) { currentNote in
             HStack {
-                VStack (alignment:.leading){
-                    NavigationLink(currentNote.title,
-                                   destination: ExistingNote(noteTitle:
-                                                                currentNote))
-                }
+                Text(note.title)
+                Text(note.description)
             }
             
         }
     }
-}
+
 
 struct NewNoteDetailView_Previews: PreviewProvider {
     static var previews: some View {

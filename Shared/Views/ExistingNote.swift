@@ -8,21 +8,23 @@
 import SwiftUI
 
 struct ExistingNote: View {
-    @ObservedObject var noteTitle: Note
+//    @ObservedObject var noteTitle: Note
     var body: some View {
-        List(noteTitle.AddMoreDescriptions) { addMoreDescriptions in
-            HStack() {
-                VStack {
-                    Text(addMoreDescriptions.description)
-                        .multilineTextAlignment(.center)
-                }
-            }
-        }
+//        List(noteTitle.AddMoreDescriptions) { addMoreDescriptions in
+//            HStack() {
+//                VStack {
+//                    Text(addMoreDescriptions.description)
+//                        .multilineTextAlignment(.center)
+//                }
+//            }
+//        }
+        
+        Text("hello")
     }
 }
 
 struct ExistingNote_Previews: PreviewProvider {
     static var previews: some View {
-        ExistingNote(noteTitle: Note(description: "i am cool", title: "who am i"))
+        ExistingNote()
     }
 }

@@ -79,8 +79,8 @@
 			isa = PBXGroup;
 			children = (
 				C8FBD06C27EE18A700911F61 /* NotesAppApp.swift */,
-				C8FBD09027EE1A6000911F61 /* View Model */,
 				C8FBD08F27EE1A5B00911F61 /* Model */,
+				C8FBD09027EE1A6000911F61 /* View Model */,
 				C8FBD08E27EE1A5500911F61 /* Views */,
 				C8FBD06E27EE18AE00911F61 /* Assets.xcassets */,
 			);
@@ -122,7 +122,6 @@
 				C8A64D9A27EE9B5E00834B69 /* CreateNotes.swift */,
 				C89DD5C227EF54D400A86DB0 /* AddDescription.swift */,
 				C89DD5C527EF54E500A86DB0 /* AddMoreDescriptions.swift */,
-				C89DD5C827EF5A3F00A86DB0 /* StoredNotes.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -130,6 +129,7 @@
 		C8FBD09027EE1A6000911F61 /* View Model */ = {
 			isa = PBXGroup;
 			children = (
+				C89DD5C827EF5A3F00A86DB0 /* StoredNotes.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";

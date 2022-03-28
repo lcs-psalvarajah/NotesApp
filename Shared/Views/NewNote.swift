@@ -21,32 +21,26 @@ struct NewNote: View {
     
     var body: some View {
         NavigationView {
-            NavigationView {
-                Form {
-                    
-                    Section (header: Text("Title")) {
-                        
-                        TextField("What do you want to call this note?", text: $title)
-                    }
-                    
-                    Section (header: Text("Description")) {
-                        
-                        TextField("Write anything you want!", text: $description)
-                    }
-                    
-                }
-                .navigationTitle("New Note")
-                .toolbar {
-                    ToolbarItem(placement: .primaryAction) {
-                        Button("Save") {
-                            saveNote()
-                        }
-                        
-                    }
-                    
-                    
-                }
+            Form {
+                
+                TextField("What do you want to call this note?", text: $title)
+                
+                TextField("Write anything you want!", text: $description)
+                
+                
             }
+            .navigationTitle("New Note")
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    Button("Save") {
+                        saveNote()
+                    }
+                    
+                }
+                
+                
+            }
+            
         }
     }
     
