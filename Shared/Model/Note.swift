@@ -13,8 +13,6 @@ class Note: Identifiable, ObservableObject {
     var title: String
     var description: String
     @Published var starred: Bool
-//    @Published var AddMoreDescriptions: [AddDescription]
-    
     //MARK: Initializers
 
     internal init(id:UUID = UUID(), description: String, title: String, starred: Bool ) {
@@ -22,8 +20,6 @@ class Note: Identifiable, ObservableObject {
         self.description = description
         self.title = title
         self.starred = starred
-//        self.AddMoreDescriptions = AddMoreDescriptions
-        
     }
 }
 
