@@ -25,6 +25,16 @@ struct ContentView: View {
             
         }
         .navigationTitle("Notes")
+        .toolbar {
+            ToolbarItem(placement: .primaryAction) {
+                Button("Add") {
+                    showingAddNote = true
+                }
+            }
+        }
+        .sheet(isPresented: $showingAddNote) {
+            NewNote(store:store, addingNote: $showingAddNote)
+        }
     }
 }
 
