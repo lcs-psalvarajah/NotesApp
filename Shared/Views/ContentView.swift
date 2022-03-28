@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
-//    //Stores all notes that are being tracked
-//    @ObservedObject var store: StoredNotes
-//    
+    //    //Stores all notes that are being tracked
+    //    @ObservedObject var store: StoredNotes
+    //
     //Controls whether the add note is showing
     @State private var showingAddNote = false
-        
+    
     @ObservedObject var store: StoredNotes
     
-//    @StateObject private var createNote = CreateNotes()
+    //    @StateObject private var createNote = CreateNotes()
     
     
     var body: some View {
@@ -24,10 +24,9 @@ struct ContentView: View {
             NewNoteDetailView(note: note)
             
         }
-    Text("hi")
-            
-        }
+        .navigationTitle("Notes")
     }
+}
 
 
 struct ContentView_Previews: PreviewProvider {

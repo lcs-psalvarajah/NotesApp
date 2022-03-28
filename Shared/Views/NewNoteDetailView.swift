@@ -12,13 +12,18 @@ struct NewNoteDetailView: View {
     @StateObject private var createNote = CreateNotes()
     
     var body: some View {
-            HStack {
+            HStack () {
+                VStack{
                 Text(note.title)
+                        .multilineTextAlignment(.leading)
+                        .font(.headline)
                 Text(note.description)
+                        .multilineTextAlignment(.center)
             }
-            
         }
+        
     }
+}
 
 
 struct NewNoteDetailView_Previews: PreviewProvider {
