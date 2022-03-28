@@ -20,9 +20,15 @@ struct ContentView: View {
     
     
     var body: some View {
-        List(store.notes) { note in
+        List {
+        
+        ForEach(store.notes) { note in
             NewNoteDetailView(note: note)
             
+        }
+            // View modifier invokes the function on the view model, "store"
+            .onDelete(perform: store.deleteItems)
+            .onMove(perform: store.moveItems)
         }
         .navigationTitle("Notes")
         .toolbar {
@@ -30,6 +36,9 @@ struct ContentView: View {
                 Button("Add") {
                     showingAddNote = true
                 }
+            }
+            ToolbarItem(placement: .navigationBarLeading) {
+                EditButton()
             }
         }
         .sheet(isPresented: $showingAddNote) {

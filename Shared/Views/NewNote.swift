@@ -37,11 +37,24 @@ struct NewNote: View {
                     }
                     
                 }
-                
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Cancel") {
+                        // Dismiss the sheet by adjusting the "showing"
+                        // property, a derived value, which is bound
+                        //to the "showingAddTask" property from
+                        // ContentView, the source of truth
+                        addingNote = false
+                    }
+                }
                 
             }
             
         }
+        //Prevents dismissal of the sheet by swiping down
+        // If sheet is dismissed this way, data is not saved
+        // Better that the user needs to press save button or cancel button
+        // so we know their intent when dismissing the sheet
+        .interactiveDismissDisabled()
     }
     
     func saveNote() {
