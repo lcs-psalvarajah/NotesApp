@@ -36,6 +36,8 @@ struct NewNote: View {
                 ToolbarItem(placement: .primaryAction) {
                     Button("Save") {
                         saveNote()
+//                        Whenever the saveNote button is presses the function is initialized
+                        numberOfStarredNotes = countStarred(store.notes)
                         
                     }
                     

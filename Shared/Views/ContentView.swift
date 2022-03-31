@@ -18,6 +18,7 @@ struct ContentView: View {
     //Whether to show starred notes or not
     @State var showingStarredNotes = true
     
+    //Whenever the numberOfStarredNots value changes it will update
     @State var numberOfStarredNotes = 0
     
 
