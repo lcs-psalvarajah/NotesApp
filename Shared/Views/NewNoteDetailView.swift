@@ -10,6 +10,9 @@ import SwiftUI
 struct NewNoteDetailView: View {
     @ObservedObject var note: Note
     @StateObject private var createNote = CreateNotes()
+
+    
+
     
     var body: some View {
             HStack () {
@@ -17,6 +20,8 @@ struct NewNoteDetailView: View {
                       "star.fill" : "star")
                     .onTapGesture {
                         note.starred.toggle()
+
+                        
                     }
                 VStack{
                 Text(note.title)

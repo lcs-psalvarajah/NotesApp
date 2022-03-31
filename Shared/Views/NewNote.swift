@@ -19,6 +19,8 @@ struct NewNote: View {
     // Whether we are showing the add activity view or not
     @Binding var addingNote: Bool
     
+    @Binding var numberOfStarredNotes: Int
+    
     var body: some View {
         NavigationView {
             Form {
@@ -34,6 +36,7 @@ struct NewNote: View {
                 ToolbarItem(placement: .primaryAction) {
                     Button("Save") {
                         saveNote()
+                        
                     }
                     
                 }
@@ -70,6 +73,6 @@ struct NewNote: View {
 
 struct NewNote_Previews: PreviewProvider {
     static var previews: some View {
-        NewNote(store: testStore, addingNote: .constant(true))
+        NewNote(store: testStore, addingNote: .constant(true), numberOfStarredNotes: .constant(0))
     }
 }

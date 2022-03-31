@@ -31,4 +31,17 @@ class StoredNotes: ObservableObject {
         notes.move(fromOffsets: source, toOffset: destination)
     }
 }
+//function for starred notes counting
+func countStarred(_ noteList: [Note]) -> Int {
+    var numberOfStarredNotes = 0
+    for note in noteList {
+        if note.starred {
+            numberOfStarredNotes += 1
+        }
+    }
+    //return the new number of starred notes
+    return numberOfStarredNotes
+}
+
+
 let testStore = StoredNotes(notes: testData)

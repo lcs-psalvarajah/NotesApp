@@ -18,16 +18,19 @@ struct ContentView: View {
     //Whether to show starred notes or not
     @State var showingStarredNotes = true
     
+    @State var numberOfStarredNotes = 0
     
+
     var body: some View {
         List {
-            
+            Text("There is currently \(numberOfStarredNotes) starred notes")
             ForEach(store.notes) { note in
                 
                 if showingStarredNotes {
                     // show all notes, starred or not starred
                     NewNoteDetailView(note: note)
                     
+
                 } else {
                     // Only show starred notes
                     if note.starred == true {
@@ -36,10 +39,12 @@ struct ContentView: View {
                     }
                 }
             }
+            
             // View modifier invokes the function on the view model, "store"
             .onDelete(perform: store.deleteItems)
             .onMove(perform: store.moveItems)
-        }
+           
+        } 
         .navigationTitle("Notes")
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
@@ -62,9 +67,11 @@ struct ContentView: View {
             }
         }
         .sheet(isPresented: $showingAddNote) {
-            NewNote(store:store, addingNote: $showingAddNote)
+            NewNote(store:store, addingNote: $showingAddNote, numberOfStarredNotes: $numberOfStarredNotes)
         }
+        
     }
+    
 }
 
 
