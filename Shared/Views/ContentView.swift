@@ -29,13 +29,13 @@ struct ContentView: View {
                 
                 if showingStarredNotes {
                     // show all notes, starred or not starred
-                    NewNoteDetailView(note: note)
+                    NewNoteDetailView(note: note, store: store, numberOfStarredNotes: $numberOfStarredNotes)
                     
 
                 } else {
                     // Only show starred notes
                     if note.starred == true {
-                        NewNoteDetailView(note: note)
+                        NewNoteDetailView(note: note, store: store, numberOfStarredNotes: $numberOfStarredNotes)
                         
                     }
                 }

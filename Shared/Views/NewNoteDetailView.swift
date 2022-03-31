@@ -11,6 +11,10 @@ struct NewNoteDetailView: View {
     @ObservedObject var note: Note
     @StateObject private var createNote = CreateNotes()
 
+    // Get a reference to the store of notes (StoredNotes)
+    @ObservedObject var store: StoredNotes
+
+    @Binding var numberOfStarredNotes: Int
     
 
     
@@ -20,8 +24,9 @@ struct NewNoteDetailView: View {
                       "star.fill" : "star")
                     .onTapGesture {
                         note.starred.toggle()
+            // Whenever the note.starred is toggled  the function will be initialized
+                        numberOfStarredNotes = countStarred(store.notes)
 
-                        
                     }
                 VStack{
                 Text(note.title)
@@ -38,6 +43,6 @@ struct NewNoteDetailView: View {
 
 struct NewNoteDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        NewNoteDetailView(note: testData[0])
+        NewNoteDetailView(note: testData[0],store: testStore, numberOfStarredNotes: .constant(0))
     }
 }
