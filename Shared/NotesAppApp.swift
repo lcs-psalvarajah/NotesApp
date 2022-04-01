@@ -2,8 +2,6 @@
 //  NotesAppApp.swift
 //  Shared
 //
-//  Created by Salvarajah, Prajina on 2022-03-25.
-//
 
 import SwiftUI
 

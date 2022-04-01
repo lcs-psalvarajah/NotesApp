@@ -2,8 +2,7 @@
 //  StoredNotes.swift
 //  NotesApp
 //
-//  Created by Salvarajah, Prajina on 2022-03-26.
-//
+
 
 import Foundation
 
