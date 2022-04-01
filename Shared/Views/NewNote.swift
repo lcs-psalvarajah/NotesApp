@@ -59,9 +59,3 @@ struct NewNote: View {
         addingNote = false
     }
 }
-
-//struct NewNote_Previews: PreviewProvider {
-//    static var previews: some View {
-//        NewNote(store: testStore, addingNote: .constant(true), numberOfStarredNotes: .constant(0))
-//    }
-//}

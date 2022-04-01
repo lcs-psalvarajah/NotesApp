@@ -22,6 +22,3 @@ class Note: Identifiable, ObservableObject {
         self.starred = starred
     }
 }
-//var testData = [
-//    Note(description: "Buy apples, lettuce and milk", title: "Grocery List", starred: true)
-//]

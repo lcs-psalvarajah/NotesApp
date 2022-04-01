@@ -38,10 +38,3 @@ struct NewNoteDetailView: View {
         }
     }
 }
-
-
-//struct NewNoteDetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        NewNoteDetailView(note: testData[0],store: testStore, numberOfStarredNotes: .constant(0))
-//    }
-//}

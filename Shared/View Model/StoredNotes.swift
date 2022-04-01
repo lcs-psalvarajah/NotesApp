@@ -41,5 +41,3 @@ class StoredNotes: ObservableObject {
     //return the new number of starred notes
     return numberOfStarredNotes
 }
-
-//let testStore = StoredNotes(notes: testData)
