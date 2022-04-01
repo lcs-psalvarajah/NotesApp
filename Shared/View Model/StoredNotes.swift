@@ -13,7 +13,6 @@ class StoredNotes: ObservableObject {
     init(notes: [Note] = []) {
         self.notes = notes
     }
-    
     //MARK: Functions
     func deleteItems(at offsets: IndexSet) {
         // "offsets" contain a set of items elescted for deletion
@@ -31,8 +30,8 @@ class StoredNotes: ObservableObject {
         notes.move(fromOffsets: source, toOffset: destination)
     }
 }
-//function for starred notes counting
-func countStarred(_ noteList: [Note]) -> Int {
+    //function for starred notes counting
+    func countStarred(_ noteList: [Note]) -> Int {
     var numberOfStarredNotes = 0
     for note in noteList {
         if note.starred {
@@ -43,5 +42,4 @@ func countStarred(_ noteList: [Note]) -> Int {
     return numberOfStarredNotes
 }
 
-
-let testStore = StoredNotes(notes: testData)
+//let testStore = StoredNotes(notes: testData)

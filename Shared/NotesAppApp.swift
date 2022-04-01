@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct NotesAppApp: App {
     
-    @StateObject private var store = StoredNotes(notes: testData)
+    @StateObject private var store = StoredNotes()
     
     var body: some Scene {
         WindowGroup {

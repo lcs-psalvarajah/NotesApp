@@ -20,7 +20,6 @@ struct ContentView: View {
     
     //Whenever the numberOfStarredNots value changes it will update
     @State var numberOfStarredNotes = 0
-    
 
     var body: some View {
         List {
@@ -31,16 +30,13 @@ struct ContentView: View {
                     // show all notes, starred or not starred
                     NewNoteDetailView(note: note, store: store, numberOfStarredNotes: $numberOfStarredNotes)
                     
-
                 } else {
                     // Only show starred notes
                     if note.starred == true {
                         NewNoteDetailView(note: note, store: store, numberOfStarredNotes: $numberOfStarredNotes)
-                        
                     }
                 }
             }
-            
             // View modifier invokes the function on the view model, "store"
             .onDelete(perform: store.deleteItems)
             .onMove(perform: store.moveItems)
@@ -76,10 +72,10 @@ struct ContentView: View {
 }
 
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            ContentView(store: testStore)
-        }
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NavigationView {
+//            ContentView((store: testStore)
+//        }
+//    }
+//}

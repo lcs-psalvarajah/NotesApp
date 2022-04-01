@@ -24,12 +24,8 @@ struct NewNote: View {
     var body: some View {
         NavigationView {
             Form {
-                
                 TextField("What do you want to call this note?", text: $title)
-                
                 TextField("Write anything you want!", text: $description)
-                
-                
             }
             .navigationTitle("New Note")
             .toolbar {
@@ -37,7 +33,6 @@ struct NewNote: View {
                     Button("Save") {
                         saveNote()                        
                     }
-                    
                 }
                 ToolbarItem(placement: .cancellationAction) {
                     Button("Cancel") {
@@ -48,9 +43,7 @@ struct NewNote: View {
                         addingNote = false
                     }
                 }
-                
             }
-            
         }
         //Prevents dismissal of the sheet by swiping down
         // If sheet is dismissed this way, data is not saved
@@ -58,20 +51,17 @@ struct NewNote: View {
         // so we know their intent when dismissing the sheet
         .interactiveDismissDisabled()
     }
-    
     func saveNote() {
         // Add the note to the list of notes
         store.notes.append(Note(description: description, title: title, starred: false))
         
         //Dismiss this view
         addingNote = false
-        
-        
     }
 }
 
-struct NewNote_Previews: PreviewProvider {
-    static var previews: some View {
-        NewNote(store: testStore, addingNote: .constant(true), numberOfStarredNotes: .constant(0))
-    }
-}
+//struct NewNote_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NewNote(store: testStore, addingNote: .constant(true), numberOfStarredNotes: .constant(0))
+//    }
+//}
