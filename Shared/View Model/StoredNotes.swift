@@ -29,8 +29,24 @@ class StoredNotes: ObservableObject {
         notes.move(fromOffsets: source, toOffset: destination)
     }
 }
-    //function for starred notes counting
-    func countStarred(_ noteList: [Note]) -> Int {
+//function for starred notes counting
+func filter(_ noteList: [Note],by visibility: numberOfNoteVisibility) -> [Note] {
+    
+    if visibility == .all {
+        return noteList
+    } else {
+        var filteredResults: [Note] = []
+        
+        for note in noteList {
+            if visibility == .starredNote && note.starred == true {
+                filteredResults.insert(note, at: 0)
+            }
+        }
+        return filteredResults
+    }
+}
+
+func countStarred(_ noteList: [Note]) -> Int {
     var numberOfStarredNotes = 0
     for note in noteList {
         if note.starred {

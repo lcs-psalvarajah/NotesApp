@@ -18,8 +18,6 @@ struct NewNote: View {
     // Whether we are showing the add activity view or not
     @Binding var addingNote: Bool
     
-    @Binding var numberOfStarredNotes: Int
-    
     var body: some View {
         NavigationView {
             Form {
@@ -30,7 +28,7 @@ struct NewNote: View {
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Button("Save") {
-                        saveNote()                        
+                        saveNote()
                     }
                 }
                 ToolbarItem(placement: .cancellationAction) {
@@ -52,7 +50,7 @@ struct NewNote: View {
     }
     func saveNote() {
         // Add the note to the list of notes
-        store.notes.append(Note(description: description, title: title, starred: false))
+        store.notes.append(Note(description: description, title: title, starred: false, added: true))
         
         //Dismiss this view
         addingNote = false

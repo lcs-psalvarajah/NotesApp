@@ -18,11 +18,24 @@ struct ContentView: View {
     
     //Whenever the numberOfStarredNots value changes it will update
     @State var numberOfStarredNotes = 0
-
+    
+    // Tracks what notes should be visible currently
+    @State private var selectednumberOfNoteVisibility: numberOfNoteVisibility = .all
+    
     var body: some View {
         List {
             Text("There is currently \(numberOfStarredNotes) starred notes")
-            ForEach(store.notes) { note in
+            
+            Picker("Filter", selection: $selectednumberOfNoteVisibility) {
+                Text(numberOfNoteVisibility.all.rawValue)
+                    .tag(numberOfNoteVisibility.all)
+                Text(numberOfNoteVisibility.starredNote.rawValue)
+                    .tag(numberOfNoteVisibility.starredNote)
+            }
+            .pickerStyle(.segmented)
+            .padding(.horizontal)
+            
+            ForEach(filter(store.notes, by: selectednumberOfNoteVisibility)) { note in
                 
                 if showingStarredNotes {
                     // show all notes, starred or not starred
@@ -35,11 +48,10 @@ struct ContentView: View {
                     }
                 }
             }
-            // View modifier invokes the function on the view model, "store"
+            //             View modifier invokes the function on the view model, "store"
             .onDelete(perform: store.deleteItems)
             .onMove(perform: store.moveItems)
-           
-        } 
+        }
         .navigationTitle("Notes")
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
@@ -50,21 +62,9 @@ struct ContentView: View {
             ToolbarItem(placement: .navigationBarLeading) {
                 EditButton()
             }
-            ToolbarItem(placement: .bottomBar) {
-                // Allow user to toggle visibility of tasks based on their completion status
-                //
-                // CONDITION TO EVALUATE          WHEN TRUE                 WHEN FALSE
-                Button(showingStarredNotes ? "Hide non-starred notes" : "Show all notes") {
-                    print("Value of showingStarredNotes was: \(showingStarredNotes) ")
-                    showingStarredNotes.toggle()
-                    print("Value of showingStarredNotes now: \(showingStarredNotes) ")
-                }
-            }
         }
         .sheet(isPresented: $showingAddNote) {
-            NewNote(store:store, addingNote: $showingAddNote, numberOfStarredNotes: $numberOfStarredNotes)
+            NewNote(store:store, addingNote: $showingAddNote)
         }
-        
     }
-    
 }

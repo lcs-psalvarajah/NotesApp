@@ -2,13 +2,13 @@
 //  NewNoteDetailView.swift
 //  NotesApp
 //
-//  Created by Salvarajah, Prajina on 2022-03-27.
-//
+
 
 import SwiftUI
 
 struct NewNoteDetailView: View {
     @ObservedObject var note: Note
+    
     @StateObject private var createNote = CreateNotes()
     
     // Get a reference to the store of notes (StoredNotes)
@@ -26,7 +26,6 @@ struct NewNoteDetailView: View {
                     // Whenever the note.starred is toggled  the function will be initialized
                     numberOfStarredNotes = countStarred(store.notes)
                 }
-            
             VStack{
                 
                 Text(note.title)
